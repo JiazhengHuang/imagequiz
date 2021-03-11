@@ -1,5 +1,5 @@
 function Footer() {
-    return <h1>This is footer!</h1>;
+    return <div>&copy; Copyright {new Date().getFullYear()}, All right</div>;
 }
 
 export default Footer;

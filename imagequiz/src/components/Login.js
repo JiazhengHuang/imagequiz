@@ -1,7 +1,17 @@
+import React from "react";
+
 function Login() {
     return (
         <>
-            <h1>This is Login page!</h1>
+            <form>
+                <h3>Welcome to the sign in page</h3>
+                <p>Enter your email:</p>
+                <input type="text" />
+                <p>Enter your password:</p>
+                <input type="text" />
+                <br />
+                <button>Sign In</button>
+            </form>
         </>
     );
 }
