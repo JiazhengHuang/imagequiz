@@ -1,18 +1,33 @@
 import React from "react";
+import Form from "react-bootstrap/Form";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 
 function Login() {
     return (
-        <>
-            <form>
-                <h3>Welcome to the sign in page</h3>
-                <p>Enter your email:</p>
-                <input type="text" />
-                <p>Enter your password:</p>
-                <input type="text" />
-                <br />
-                <button>Sign In</button>
-            </form>
-        </>
+        <Row>
+            <Col>
+                <Form>
+                    <Form.Group controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="email" placeholder="Enter email" />
+                        <Form.Text className="text-muted">
+                            We'll never share your email with anyone else.
+                        </Form.Text>
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder="Password" />
+                    </Form.Group>
+                    <Form.Group controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label="Check me out" />
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+                </Form>
+            </Col>
+        </Row>
     );
 }
 

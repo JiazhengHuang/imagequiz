@@ -1,20 +1,40 @@
 import React from "react";
-import Flower from "../data.js";
+import Flower from "../flowers.js";
 import "./Home.css";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Home() {
     return (
-        <>
-            <ul className="imgUL">
+        <Container>
+            <Row>
                 {Flower.map((obj) => (
-                    <li>
-                        <img src={obj.picture} alt={obj.name}></img>
-                        <br />
-                        {obj.name}
-                    </li>
+                    <>
+                        <Col
+                            style={{
+                                height: 350,
+                                width: 300,
+                                textAlign: "center",
+                            }}
+                        >
+                            <Link to="/quiz">
+                                <Image
+                                    src={obj.picture}
+                                    alt={obj.name}
+                                    classname="flower"
+                                    style={{
+                                        height: 300,
+                                        width: 300,
+                                    }}
+                                ></Image>
+                            </Link>
+                            <br />
+                            {obj.name}
+                        </Col>
+                    </>
                 ))}
-            </ul>
-        </>
+            </Row>
+        </Container>
     );
 }
 
