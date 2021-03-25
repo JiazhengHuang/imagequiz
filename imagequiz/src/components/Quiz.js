@@ -1,5 +1,4 @@
 import React from "react";
-import Flower from "../flowers.js";
 import quizzes from "../data.js";
 
 import { Container, Row, Col, Image } from "react-bootstrap";
