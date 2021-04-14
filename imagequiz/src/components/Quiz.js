@@ -1,5 +1,6 @@
 import React from "react";
-import quizzes from "../data.js";
+import Quizs from "../data.js";
+import Flower from "../flowers.js";
 
 import { Container, Row, Col, Image } from "react-bootstrap";
 
@@ -7,10 +8,11 @@ function Quiz() {
     return (
         <Container>
             <Row>
-                {quizzes.map((obj) => (
+                {Quizs.map((obj) => (
                     <>
-                        <Col>
-                            <quizzes sendData={} />
+                        <Col className="image-col">
+                            <br />
+                            {obj.picture}
                         </Col>
                     </>
                 ))}

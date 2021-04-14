@@ -10,22 +10,12 @@ function Home() {
             <Row>
                 {Flower.map((obj) => (
                     <>
-                        <Col
-                            style={{
-                                height: 350,
-                                width: 300,
-                                textAlign: "center",
-                            }}
-                        >
+                        <Col className="image-col">
                             <Link to="/quiz">
                                 <Image
                                     src={obj.picture}
                                     alt={obj.name}
-                                    classname="flower"
-                                    style={{
-                                        height: 300,
-                                        width: 300,
-                                    }}
+                                    className="img-flower "
                                 ></Image>
                             </Link>
                             <br />
