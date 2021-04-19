@@ -15,7 +15,7 @@ function Quiz(props) {
         let selectQuiz = quizzes[id];
         console.log(selectQuiz);
         setQuiz(selectQuiz);
-    });
+    }, [props.match.params.id]);
 
     const handleAnswerClick = () => {};
 
