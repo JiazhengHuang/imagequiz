@@ -15,7 +15,7 @@ function App() {
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/login" component={Login} />
-                <Route path="/quiz" component={Quiz} />
+                <Route path="/quiz/:id" component={Quiz} />
             </Switch>
             <Footer />
         </HashRouter>

@@ -8,10 +8,10 @@ function Home() {
     return (
         <Container>
             <Row>
-                {Flower.map((obj) => (
+                {Flower.map((obj, index) => (
                     <>
                         <Col className="image-col">
-                            <Link to="/quiz">
+                            <Link to={"/quiz/" + index}>
                                 <Image
                                     src={obj.picture}
                                     alt={obj.name}
