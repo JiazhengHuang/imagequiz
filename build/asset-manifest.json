@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/imagequiz/static/css/main.80d778e1.chunk.css",
-    "main.js": "/imagequiz/static/js/main.92142b3b.chunk.js",
-    "main.js.map": "/imagequiz/static/js/main.92142b3b.chunk.js.map",
+    "main.js": "/imagequiz/static/js/main.c53bf21e.chunk.js",
+    "main.js.map": "/imagequiz/static/js/main.c53bf21e.chunk.js.map",
     "runtime-main.js": "/imagequiz/static/js/runtime-main.0c959d44.js",
     "runtime-main.js.map": "/imagequiz/static/js/runtime-main.0c959d44.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/imagequiz/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.0395b3a5.chunk.js": "/imagequiz/static/js/2.0395b3a5.chunk.js",
-    "static/js/2.0395b3a5.chunk.js.map": "/imagequiz/static/js/2.0395b3a5.chunk.js.map",
+    "static/js/2.6f817f6d.chunk.js": "/imagequiz/static/js/2.6f817f6d.chunk.js",
+    "static/js/2.6f817f6d.chunk.js.map": "/imagequiz/static/js/2.6f817f6d.chunk.js.map",
     "index.html": "/imagequiz/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/imagequiz/static/css/2.4c97ca4f.chunk.css.map",
     "static/css/main.80d778e1.chunk.css.map": "/imagequiz/static/css/main.80d778e1.chunk.css.map",
-    "static/js/2.0395b3a5.chunk.js.LICENSE.txt": "/imagequiz/static/js/2.0395b3a5.chunk.js.LICENSE.txt"
+    "static/js/2.6f817f6d.chunk.js.LICENSE.txt": "/imagequiz/static/js/2.6f817f6d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0c959d44.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.0395b3a5.chunk.js",
+    "static/js/2.6f817f6d.chunk.js",
     "static/css/main.80d778e1.chunk.css",
-    "static/js/main.92142b3b.chunk.js"
+    "static/js/main.c53bf21e.chunk.js"
   ]
 }
