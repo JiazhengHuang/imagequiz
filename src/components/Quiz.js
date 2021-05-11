@@ -7,8 +7,9 @@ import { Container, Row, Col, Image, Form, Button } from "react-bootstrap";
 function Quiz(props) {
     // const [quiz, setQuiz] = useState([]);
     const [quiz, setQuiz] = useState([]);
-    var score = 0;
+    const [showScore, setShowScore] = useState(false);
 
+    var score = 0;
     useEffect(() => {
         let id = props.match.params.id;
         console.log(id);
@@ -17,7 +18,17 @@ function Quiz(props) {
         setQuiz(selectQuiz);
     }, [props.match.params.id]);
 
-    const handleAnswerClick = () => {};
+    function handleSubmit(e) {
+        e.preventDefault();
+        setShowScore(true);
+    }
+
+    function handleChange(num) {
+        console.log(num);
+        if (num === 0) {
+            score = score + 1;
+        }
+    }
 
     return (
         <Container>
@@ -37,6 +48,8 @@ function Quiz(props) {
                                         type="radio"
                                         id={questionIndex + "-" + choiseIndex}
                                         label={choise}
+                                        //value={obj.answer}
+                                        checked={handleChange(choiseIndex)}
                                     />
                                 ))}
                             </Form>
@@ -44,16 +57,24 @@ function Quiz(props) {
                     </>
                 ))}
             </Row>
-            <Row>
+            <Row className="justify-content-md-center">
                 <Button
                     variant="warning"
                     type="submit"
                     className="quiz-btn"
-                    // onClick={() => handleAnswerClick()}
+                    onClick={handleSubmit}
                 >
                     Submite
                 </Button>
             </Row>
+            <br />
+            {showScore ? (
+                <Row className="justify-content-md-center">
+                    Congratulation!!! You Scored {score}.
+                </Row>
+            ) : (
+                <Row></Row>
+            )}
         </Container>
     );
 }
