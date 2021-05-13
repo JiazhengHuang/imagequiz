@@ -1,32 +1,33 @@
 import { React, useEffect, useState } from "react";
-import quizzes from "../data.js";
 import "./Quiz.css";
+import api from "../communication/api";
 
 import { Container, Row, Col, Image, Form, Button } from "react-bootstrap";
 
 function Quiz(props) {
-    // const [quiz, setQuiz] = useState([]);
     const [quiz, setQuiz] = useState([]);
     const [showScore, setShowScore] = useState(false);
+    const [score, setScore] = useState(0);
 
-    var score = 0;
     useEffect(() => {
         let id = props.match.params.id;
         console.log(id);
-        let selectQuiz = quizzes[id];
-        console.log(selectQuiz);
-        setQuiz(selectQuiz);
-    }, [props.match.params.id]);
+        if (quiz.length === 0) {
+            api.getQuizById(id).then((x) => setQuiz(x));
+        }
+        console.log(quiz);
+    }, [quiz.length, props.match.params.id, quiz]);
 
     function handleSubmit(e) {
         e.preventDefault();
         setShowScore(true);
     }
 
-    function handleChange(num) {
-        console.log(num);
-        if (num === 0) {
-            score = score + 1;
+    function handleChange(event) {
+        console.log(event.target.value === "true");
+        if (event.target.value === "true") {
+            setScore(score + 1);
+            console.log(score);
         }
     }
 
@@ -48,8 +49,8 @@ function Quiz(props) {
                                         type="radio"
                                         id={questionIndex + "-" + choiseIndex}
                                         label={choise}
-                                        //value={obj.answer}
-                                        checked={handleChange(choiseIndex)}
+                                        value={choise === obj.answer}
+                                        onChange={handleChange}
                                     />
                                 ))}
                             </Form>
